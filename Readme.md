@@ -58,7 +58,31 @@ Copie el Archivo .env.example en un archivo nuevo .env con
   cp .env.example .env
 ```
 
-Configure la base de datos y las demás variables de entorno en el archivo .env
+## Laravel Telescope
+
+Laravel Telescope es una herramienta que «observa» todo lo que ocurre en nuestra aplicación y lo brinda en una interfaz gráfica muy intuitiva e independiente de tu aplicación.
+
+```bash
+  composer require laravel/telescope
+```
+
+Si deseas que Telescope solo este disponible para tu entorno de desarrollo y no para producción, puedes agregar la opción --dev al comando anterior.
+
+```bash
+  composer require laravel/telescope --dev
+```
+
+Una vez que finalice la instalación, debes ejecutar los siguientes comando para importar los archivos del paquete:
+```bash
+  php artisan telescope:install
+  php artisan migrate
+```
+Si todo está correcto puede acceder de la siguiente manera
+```bash
+  http://localhost:8000/telescope
+```
+
+## Configuracion de entorno
 
 Genere una nueva Key para el proyecto con
 
